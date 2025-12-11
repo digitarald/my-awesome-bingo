@@ -14,3 +14,7 @@ export interface BingoLine {
 }
 
 export type GameState = 'start' | 'playing' | 'bingo';
+
+export type AppMode = 'bingo' | 'cardDeck';
+
+export type CardState = 'ready' | 'revealed';
