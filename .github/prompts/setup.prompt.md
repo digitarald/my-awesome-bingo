@@ -11,4 +11,4 @@ Your goal is to successfully build and run the workspace as local development en
 - [ ] Lint, build and test tasks functional
 - [ ] Dev server running
 - [ ] Site open in browser preview
-- [ ] Short engaging welcome tour for the workspace
+- [ ] Explain engaging welcome tour for the workspace
