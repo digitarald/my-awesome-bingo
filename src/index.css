@@ -9,7 +9,9 @@
   --color-bingo: #D4A574;            /* caramel */
   --color-bg: #FAF7F2;               /* warm parchment */
   --color-surface: #FFF8F0;          /* cream white */
+  --color-surface-alt: #FFF5E8;      /* warm cream gradient */
   --color-border: #E0D5C7;           /* latte border */
+  --color-border-light: rgba(224, 213, 199, 0.4);  /* subtle border */
   --color-text-primary: #3E2723;     /* dark espresso */
   --color-text-secondary: #6B4226;   /* medium coffee */
   --color-text-muted: #8D7B68;       /* mocha */
@@ -23,7 +25,25 @@ body,
 
 body {
   margin: 0;
-  font-family: Georgia, 'Times New Roman', serif, system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   -webkit-tap-highlight-color: transparent;
   background-color: var(--color-bg);
+}
+
+/* Elegant typography hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Crimson Text', Georgia, 'Times New Roman', serif;
+  font-weight: 600;
+}
+
+/* Entrance animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
