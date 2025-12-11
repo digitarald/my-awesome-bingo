@@ -31,9 +31,9 @@ export function StartScreen({ onStart }: StartScreenProps) {
           animation: 'fadeInUp 600ms ease-out 600ms both'
         }}>
           <div className="rounded-xl p-10 mb-16" style={{ 
-            background: 'linear-gradient(135deg, var(--color-surface) 0%, #FFF5E8 100%)',
+            background: 'linear-gradient(135deg, var(--color-surface) 0%, var(--color-surface-alt) 100%)',
             borderWidth: '1px',
-            borderColor: 'rgba(224, 213, 199, 0.4)',
+            borderColor: 'var(--color-border-light)',
             boxShadow: '0 8px 16px rgba(107, 66, 38, 0.06)'
           }}>
             <h2 className="text-xl font-semibold mb-6" style={{ 
@@ -105,12 +105,12 @@ export function StartScreen({ onStart }: StartScreenProps) {
               boxShadow: '0 4px 12px rgba(107, 66, 38, 0.15)',
               letterSpacing: '0.02em'
             }}
-            onMouseOver={(e) => {
+            onMouseEnter={(e) => {
               e.currentTarget.style.backgroundColor = 'var(--color-accent-light)';
               e.currentTarget.style.transform = 'translateY(-2px)';
               e.currentTarget.style.boxShadow = '0 8px 20px rgba(107, 66, 38, 0.25)';
             }}
-            onMouseOut={(e) => {
+            onMouseLeave={(e) => {
               e.currentTarget.style.backgroundColor = 'var(--color-accent)';
               e.currentTarget.style.transform = 'translateY(0)';
               e.currentTarget.style.boxShadow = '0 4px 12px rgba(107, 66, 38, 0.15)';
@@ -120,20 +120,6 @@ export function StartScreen({ onStart }: StartScreenProps) {
           </button>
         </div>
       </div>
-
-      {/* CSS animation keyframes */}
-      <style>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </div>
   );
 }
